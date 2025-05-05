@@ -1,10 +1,12 @@
+import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./components/Header";
 
 export default function App() {
   return (
-    <div>
-      <Header />
-      <h1>Hello World APP component</h1>;
-    </div>
+    <BrowserRouter>
+      <Route path="/" element={<Users />} exact />
+      <Route path="/places/new" element={<CreatePlaces />} exact />
+      <Redirect to="/" />
+    </BrowserRouter>
   );
 }
