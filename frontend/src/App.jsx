@@ -6,7 +6,6 @@ export default function App() {
     <BrowserRouter>
       <Route path="/" element={<Users />} exact />
       <Route path="/places/new" element={<CreatePlaces />} exact />
-      <Redirect to="/" />
     </BrowserRouter>
   );
 }
