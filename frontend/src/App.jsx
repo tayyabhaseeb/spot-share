@@ -1,11 +1,14 @@
-import { BrowserRouter, Route } from "react-router-dom";
-import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UserPage from "./users/pages/UserPage";
+import CreateNewPlace from "./places/pages/CreateNewPlace";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Route path="/" element={<Users />} exact />
-      <Route path="/places/new" element={<CreatePlaces />} exact />
+      <Routes>
+        <Route path="/" element={<UserPage />} exact />
+        <Route path="/places/new" element={<CreateNewPlace />} exact />
+      </Routes>
     </BrowserRouter>
   );
 }
